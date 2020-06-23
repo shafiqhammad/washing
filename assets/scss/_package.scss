@@ -1,0 +1,132 @@
+
+.package-area {
+    position: relative;
+    z-index: 1;
+
+    .shape {
+        position: absolute;
+        z-index: -1;
+
+        &.shape-1 {
+            top: 150px;
+            left: 190px;
+        }
+        &.shape-2 {
+            bottom: 220px;
+            left: 35px;
+        }
+        &.shape-3 {
+            bottom: 130px;
+            left: 320px;
+        }
+        &.shape-4 {
+            top: 320px;
+            left: 430px;
+        }
+        &.shape-5 {
+            top: 220px;
+            right: 380px;
+        }
+        &.shape-6 {
+            top: 40px;
+            right: 175px;
+        }
+        &.shape-7 {
+            bottom: 150px;
+            right: -150px;
+        }
+    }
+
+    .section-title {
+        h2 {
+            span {
+                display: block;
+                color: $theme-color;
+            }
+        }
+    }
+
+    .package-wrapper {
+        display: flex;
+        align-items: center;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media #{$xs} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .single-package {
+            border-radius: 10px;
+            background: $white;
+            padding: 35px 65px;
+            text-align: center;
+            margin-bottom: 30px;
+            @include box-shadow(0px 0px 16px rgba(8, 152, 231, 0.15));
+
+            @media #{$lg} {
+                padding: 35px 38px;
+            }
+            @media #{$md} {
+                padding: 35px 38px;
+                max-width: 380px;
+            }
+            @media #{$xs} {
+                padding: 35px;
+                max-width: 380px;
+            }
+
+            .package-name {
+                h5 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .package-price {
+                h2 {
+                    font-size: 40px;
+                    font-weight: 600;
+                    color: $theme-color;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .package-details {
+                margin-bottom: 30px;
+                li {
+                    font-size: 16px;
+                    line-height: 36px;
+                    color: $body-color;
+
+                    &.text-underline {
+                        text-decoration: underline;
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            .package-btn {
+                width: 100%;
+                font-size: 16px;
+                font-weight: 500;
+                color: $theme-color;
+                padding: 12px 60px;
+                border-radius: 3px;
+                border: 2px solid $theme-color;
+                background: rgba($theme-color, .1);
+                @include transition(.3s);
+
+                &.active,
+                &:hover {
+                    background: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,183 @@
+
+.hero-area {
+    margin: 0 100px;
+    position: relative;
+    border-radius: 25px;
+    z-index: 1;
+    overflow: hidden;
+
+    @media #{$laptop} {
+        margin: 0 80px;
+    }
+    @media #{$lg} {
+        margin: 0 70px;
+    }
+    @media #{$md} {
+        margin: 0px;
+        border-radius: 0px;
+    }
+    @media #{$xs} {
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+
+    .hero-content {
+        padding: 290px 0;
+
+        @media #{$laptop} {
+            padding: 240px 0;
+        }
+        @media #{$lg} {
+            padding: 180px 0;
+        }
+        @media #{$md} {
+            padding: 150px 0;
+        }
+        @media #{$xs} {
+            padding: 150px 0;
+        }
+
+        h2 {
+            font-size: 65px;
+            line-height: 75px;
+            font-weight: 600;
+            color: $white;
+            margin-bottom: 30px;
+
+            @media #{$laptop} {
+                font-size: 58px;
+                line-height: 70px;
+            }
+            @media #{$lg} {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @media #{$md} {
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @media #{$xs} {
+                font-size: 32px;
+                line-height: 40px;
+            }
+            @media #{$sm} {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
+
+        .form-wrapper {
+            max-width: 625px;
+            background: rgba($white, .25);
+            border-radius: 10px;
+            margin: auto;
+            padding: 20px;
+
+            form {
+                background: $white;
+                display: flex;
+                justify-content: space-between;
+                border-radius: 5px;
+
+                @media #{$xs} {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                @media #{$sm} {
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+
+                input, select {
+                    border: none;
+                    background: none;
+                    color: $body-color;
+                    padding: 0 35px;
+                    margin: 15px 0;
+                    width: 33%;
+
+                    @media #{$xs} {
+                        width: 50%;
+                    }
+                    @media #{$sm} {
+                        width: 33%;
+                    }
+                }
+
+                input {
+                    border-right: 1px solid $border-color;
+                }
+                
+                button {
+                    border: none;
+                    padding: 17px 35px;
+                    background: $theme-color;
+                    color: $white;
+                    border-radius: 0 5px 5px 0;
+
+                    @media #{$xs} {
+                        width: 100%;
+                    }
+
+                    @media #{$sm} {
+                        width: auto;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        z-index: 99;
+        bottom: 30px;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin: 0 8px;
+
+            button {
+                text-indent: -9999px;
+                padding: 0;
+                border: 0;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: rgba($white, .39);
+                @include transition(.3s);
+            }
+
+            &.slick-active {
+                button {
+                    background: $white;
+                }
+            }
+        }
+    }
+
+}
+
+.client-logo-area {
+
+    @media #{$xs} {
+        padding-top: 80px;
+    }
+    
+    .single-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .56;
+        @include transition(.3s);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

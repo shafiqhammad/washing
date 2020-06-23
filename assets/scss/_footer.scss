@@ -1,0 +1,147 @@
+
+.footer-area {
+    margin: 0 100px;
+    border-radius: 25px 25px 0 0;
+    background: url('../img/footer-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 115px;
+
+    @media #{$laptop} {
+        margin: 0 80px;
+    }
+    @media #{$lg} {
+        margin: 0 70px;
+    }
+    @media #{$md} {
+        margin: 0 30px;
+    }
+    @media #{$xs} {
+        margin: 0px;
+    }
+
+    .footer-widget {
+        color: $white;
+        line-height: 1.75;
+        margin-bottom: 60px;
+
+        h5 {
+            font-size: 20px;
+            font-weight: 600;
+            color: $white;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: $white;
+            @include transition(.3s);
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+
+        form {
+            position: relative;
+            margin-bottom: 60px;
+            input {
+                padding: 20px 30px;
+                border: 1px solid transparent;
+                border-radius: 50px;
+                background: rgba($white, .1);
+                color: $white;
+                font-size: 14px;
+                width: 100%;
+                @include transition(.3s);
+
+                &::placeholder {
+                    color: rgba($white, .78);
+                }
+                &:focus {
+                    border-color: $theme-color;
+                }
+            }
+            button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 19px 28px;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: $white;
+                background: $theme-color;
+                border-radius: 50px;
+                border: none;
+                @include transition(.3s);
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media #{$lg} {
+                display: block;
+            }
+            @media #{$md} {
+                display: block;
+            }
+            @media #{$xs} {
+                display: block;
+            }
+
+            h5 {
+                margin-bottom: 0px;
+
+                @media #{$lg} {
+                    margin-bottom: 40px;
+                }
+                @media #{$md} {
+                    margin-bottom: 40px;
+                }
+                @media #{$xs} {
+                    margin-bottom: 40px;
+                }
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    margin-left: 20px;
+
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 42px;
+                        border-radius: 50%;
+                        text-align: center;
+                        background: rgba($white, .3);
+                        color: $black;
+                        @include transition(.3s);
+
+                        &:hover {
+                            background: $white;
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copy-right {
+        padding: 30px 0;
+        border-top: 2px solid rgba($white, .18);
+    }
+}

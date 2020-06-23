@@ -1,0 +1,83 @@
+
+.apps-area {
+    background: url('../img/apps-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 100px 100px 0;
+    border-radius: 25px;
+    padding: 90px 0;
+    text-align:center;
+
+    @media #{$laptop} {
+        margin: 100px 80px 0;
+    }
+    @media #{$lg} {
+        margin: 100px 70px 0;
+    }
+    @media #{$md} {
+        margin: 100px 0px 0px ;
+        border-radius: 0px;
+    }
+    @media #{$xs} {
+        margin: 100px 0px 0px;
+        border-radius: 0px;
+    }
+
+    .apps-content {
+        
+        h2 {
+            color: $white;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $white;
+            margin-bottom: 40px;
+        }
+
+        .download-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 -12px;
+            flex-wrap: wrap;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 13px 30px;
+                background: $white;
+                border-radius: 10px;
+                @include box-shadow(0px 3px 6px rgba(123, 123, 123, 0.16));
+                @include transition(.3s);
+                margin: 12px;
+                color: $body-color;
+
+                &:hover {
+                    background: rgba($white, .9);
+                    color: $theme-color;
+                }
+
+
+                span.icon {
+                    font-size: 24px;
+                    margin-right: 20px;
+                }
+
+                span.text {
+                    text-align: left;
+                    font-size: 10px;
+
+                    b {
+                        font-size: 16px;
+                        font-weight: 600;
+                        display: block;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
